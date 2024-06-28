@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     title = "HTTP/3";
     icon = "h3";
   }
-  else if (message.startsWith("http") {
+  else if (message.startsWith("http")) {
     title = message.toUpperCase();
     icon = "h1";
   }
