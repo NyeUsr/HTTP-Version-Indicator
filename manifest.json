@@ -1,27 +1,30 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "HTTP Version Indicator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Indicate the HTTP version for the current page.",
   "icons": {
     "128": "icons/default.png"
   },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{a80bfac2-d81a-47a3-89ca-ea9ad213d35b}"
+    }
+  },
   "background": {
-    "persistent": false,
     "scripts": ["background.js"]
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["*://*/*"],
       "js": ["content-script.js"],
       "run_at": "document_end"
     }
   ],
-"page_action": {
-	"browser_style": true,
+  "page_action": {
 	"default_icon": "icons/default.png",
 	"default_title": "HTTP Version Unknown",
 	"show_matches": ["http://*/*", "https://*/*"],
 	"hide_matches": ["https://addons.mozilla.org/*", "https://accounts.firefox.com/*"]
- }
+   }
 }
