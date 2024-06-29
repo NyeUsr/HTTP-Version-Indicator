@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     title = "HTTP/2";
     icon = "h2";
   }
-  else if (message.startsWith("h3")) {
+  else if (message === "h3") {
     title = "HTTP/3";
     icon = "h3";
   }
