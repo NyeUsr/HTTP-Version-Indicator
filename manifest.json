@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "HTTP Version Indicator",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Indicate the HTTP version for the current page.",
   "icons": {
     "128": "icons/default.png"
